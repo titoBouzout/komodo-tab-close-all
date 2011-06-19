@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overlay  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ 
+	<script type="application/x-javascript">
+	  <![CDATA[
+		/*
+		  improvements more than welcome please submit these to github, regards
+		*/
+		var titoTabCloseAll = {
+		  
+		  close:function()
+		  {
+			var views = ko.views.manager.topView.getDocumentViews(true);
+			for(var i=0;i<views.length;i++)
+			{
+			  views[i].close();
+			}
+		  }
+		};
+	  ]]>
+	</script>
+  	
+	
+	<!-- tab context menu -->
+  
+	  <menupopup id="tabContextMenu">
+		  
+  		  <menuitem
+			insertafter="buffertab-context-close-others"
+			id="tito-buffertab-context-close-all"
+			label="Close All Tabs"
+			oncommand="titoTabCloseAll.close();"
+		  />
+		  
+	  </menupopup>
+</overlay>

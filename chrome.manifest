@@ -1,0 +1,2 @@
+content tabcloseall chrome/content/
+overlay chrome://komodo/content/komodo.xul chrome://tabcloseall/content/tabcloseall.xul
