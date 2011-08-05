@@ -13,6 +13,7 @@
 			var views = ko.views.manager.topView.getDocumentViews(true);
 			for(var i=0;i<views.length;i++)
 			{
+			  views[i].makeCurrent();
 			  views[i].close();
 			}
 		  }
